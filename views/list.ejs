@@ -1,0 +1,39 @@
+<!--
+Project Project using EJS and MongoDB 
+Udemy Course: The Complete 2023 Web Developement Bootcamp
+Acknowledgement: Angela Yu (App Brewery)
+By: sys-unknwn7645
+-->
+
+<%- include('header') -%>
+
+
+    <div class="box" id="heading">
+        <h1> <%= listTitle %> List</h1>
+    </div>
+    
+    <div class="box">
+        <% newListItems.forEach(function(item,index){ %> 
+            
+        <form action="/delete" method="post">
+            <div class="item">
+                <input type="checkbox" onChange="this.form.submit()" name="delitem" value="<%= item._id%>">
+                <p> <%= item.itemName %> </p>
+            </div>
+            <input type="hidden" name="list" value="<%= listTitle %>">
+        </form>
+        <% }) %>
+
+
+        <form action="/" method="post" class="item">
+            <input type="text" name="input" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+    </div>
+
+    
+
+
+<%- include('footer') -%>
+
+

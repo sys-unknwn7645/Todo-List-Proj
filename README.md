@@ -1,0 +1,1 @@
+This project makes a dynamic todo list. Part of the course work using EJS and MongoDB. Udemy Course: The Complete 2023 Web Developement Bootcamp Acknowledgement: Angela Yu (App Brewery).
